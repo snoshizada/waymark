@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'none'; form-action 'self'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Waymark — Pathfinder 2e Character Builder</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"><div class="bd-img"></div><div class="bd-tint"></div></div>
+<header class="top">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11.5" fill="none" stroke="currentColor" stroke-opacity=".35"/><path d="M13 3.5l3 9.5-3 9.5-3-9.5z" fill="var(--accent)"/><circle cx="13" cy="13" r="1.6" fill="var(--bg)"/></svg>
+    <b>Waymark</b><small>Pathfinder 2e character builder</small>
+  </div>
+  <div class="top-actions">
+    <select class="select" id="roster" aria-label="Your characters"></select>
+    <button class="btn ghost sm" data-act="newChar" title="Start a new character"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="lbl">New</span></button>
+    <button class="icon-btn acct-btn" data-acct-open aria-label="Account and sync" title="Account and sync"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="6.2" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.8 15.5c.9-3 3.3-4.6 6.2-4.6s5.3 1.6 6.2 4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="acct-dot" hidden></span></button>
+    <button class="icon-btn" data-ap-open aria-label="Appearance: theme and background" title="Appearance"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="2" y="3" width="14" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.8 13l4-4.2 3 3 2-2 3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="6.6" r="1.4" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<div class="shell">
+  <nav class="rail" id="rail" aria-label="Build steps"></nav>
+  <main id="main"></main>
+  <aside class="side" id="side" aria-label="Character summary"></aside>
+</div>
+<div class="scrim" id="scrim" data-act="closeSide"></div>
+<div class="mbar" id="mbar"></div>
+<div id="popwrap"></div>
+<div id="appearwrap"></div>
+<div id="accountwrap"></div>
+<div id="dicewrap"></div>
+
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/appearance.js"></script>
+<script src="js/companions.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dice.js"></script>
+<script src="js/vendor/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/sync.js"></script>
+</body>
+</html>
